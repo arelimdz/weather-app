@@ -39,12 +39,18 @@ class App extends React.Component{
       <div>
         <h1>Weather app</h1>
         <h3>The current weather in Melbourne is:</h3>
-        <Weather/>
 
         <button onClick={() =>{this.addDayCount(this.state.dayCount)}}>Add day</button>
         <button onClick={() =>{this.decreaseDayCount(this.state.dayCount)}}>Remove day</button>
 
         <h3>The weather tomorro will be</h3>
+
+        {
+          Array(this.state.dayCount).fill(null).map(() => <Weather/>)
+        }
+
+
+        <Weather/>
       </div>
     )
   }
