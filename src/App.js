@@ -10,13 +10,12 @@ import React from 'react';
 // Forescast between 1 to 10
 
 class App extends React.Component{
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
 
     //  start with at least current weather and one day after
     this.state = {
-      dayCount : 1,
-      city: 'cityName'
+      city: 'londres'
     }
   }
 
@@ -24,8 +23,8 @@ class App extends React.Component{
     return (
       <div>
         <h1>Weather app</h1>
-        <h3>The current weather in Melbourne is:</h3>
-        <Weather/>
+        <h3>The current weather in {this.city} is:</h3>
+        <Weather city={this.state.city}/>
       </div>
     )
   }

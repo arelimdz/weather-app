@@ -10,11 +10,15 @@ class Weather extends Component {
     };
   }
 
+  
   async componentDidMount() {
+    // Receive the city prop from the parent component
+    const { city } = this.props;
+    const apiUrl = `http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${city}&aqi=no`
+    
     try {
       // Make an API request to fetch weather data
-      let apiResponse = await fetch(`http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=London&aqi=no`
-      );
+      let apiResponse = await fetch(apiUrl);
 
       if (!apiResponse.ok) {
         throw new Error("Network response was not ok");
@@ -29,7 +33,11 @@ class Weather extends Component {
     } catch (error) {
       console.error("Error fetching weather data:", error);
     }
+
   }
+
+
+
 
   render() {
     const { weatherData } = this.state; // Destructure weatherData from state
