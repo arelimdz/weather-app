@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import API_KEY from '../config';
+import SearchCity from './SearchCity';
 
 class Weather extends Component {
   constructor(props) {
@@ -8,14 +9,15 @@ class Weather extends Component {
     this.state = {
       weatherData: null, // Initialize weatherData state as null
     };
+
+    this.fetchWeatherData = this.fetchWeatherData.bind(this);
   }
 
-  
-  async componentDidMount() {
-    // Receive the city prop from the parent component
-    const { city } = this.props;
+
+  // Function that handles API requests for weatherdata for initial data or for updated data.
+  fetchWeatherData = async (city) => {
+    // Fetch data from Openweathermap API using city name and set it to the state of weatherData variable
     const apiUrl = `http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${city}&aqi=no`
-    
     try {
       // Make an API request to fetch weather data
       let apiResponse = await fetch(apiUrl);
@@ -36,23 +38,22 @@ class Weather extends Component {
 
   }
 
-
-
-
   render() {
     const { weatherData } = this.state; // Destructure weatherData from state
 
     return (
       <div>
+        <SearchCity onCitySubmit={this.fetchWeatherData} />
+
         {weatherData ? ( // Conditional rendering based on whether weatherData is available
           <div>
-            <h1>Weather in {weatherData.location.name}</h1>
-            <p>Temperature: {weatherData.current.temp_c}°C</p>
-            <p>Weather: {weatherData.current.condition.text}</p>
-          </div>
+          <h3>Weather in {weatherData.location.name}</h3>
+          <p>Temperature: {weatherData.current.temp_c}°C</p>
+          <p>Weather: {weatherData.current.condition.text}</p>
+        </div>
         ) : (
-          <div>
-            <h1>Still loading weather data...</h1>
+        <div>
+            <p>Loading weather data...</p>
           </div>
         )}
       </div>
