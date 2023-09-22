@@ -1,6 +1,6 @@
 import './App.css';
 import SearchCity from './components/SearchCity';
-import Weather from './components/Weather';
+import Weather from './components/WeatherFather';
 import React from 'react';
 
 

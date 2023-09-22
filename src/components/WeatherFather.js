@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import API_KEY from '../config';
 import SearchCity from './SearchCity';
-import { formatLocalTime } from "../utils/formatLocalTime";
+import formatDateTime from "../utils/formatLocalTime";
+import TenDayForecast from "./TenDayForecast";
 
 
 class Weather extends Component {
@@ -20,7 +21,7 @@ class Weather extends Component {
   fetchWeatherData = async (city) => {
     // Fetch data from Openweathermap API using city name and set it to the state of weatherData variable
     // const apiUrl = `http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${city}&aqi=no`
-    const apiUrl = `http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${city}&days=1&aqi=no&alerts=no`
+    const apiUrl = `http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${city}&days=10&aqi=no&alerts=no`
     
     try {
       // Make an API request to fetch weather data
@@ -46,11 +47,10 @@ class Weather extends Component {
     // Destructure weatherData from state
     const { weatherData } = this.state; 
 
-    // Format local time using the formatLocalTime function
+    // Format local time using the formatDateTime function
     const formattedLocalTime = weatherData
-    ? formatLocalTime(weatherData.location.localtime) // Pass localtime as an argument
+    ? formatDateTime(weatherData.location.localtime) // Pass localtime as an argument
     : "";
-
 
     return (
       <div>
@@ -65,9 +65,11 @@ class Weather extends Component {
           <h1>Temperature: {weatherData.current.temp_c}°C</h1>
           <p>Weather: {weatherData.current.condition.text}</p>
 
-          <h3>Forescast</h3>
+          <h3>Forescast for tomorrow</h3>
 
-
+          <div className="forescast">
+          <TenDayForecast weatherData={weatherData} />
+          </div>
 
 
         </div>
