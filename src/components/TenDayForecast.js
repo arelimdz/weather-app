@@ -9,12 +9,12 @@ const TenDayForecast = ({ weatherData }) => {
 
 return (
   <div>
+
     <h2>Ten-Day Forecast</h2>
     <div className="ten-day-forecast">
       {weatherData.forecast.forecastday.slice(0, 10).map((day, index) => (
         <div key={index} className="forecast">
-          <h3>{formatDateTime(day.date)}</h3> {/* Format the date here */}
-          <p>Date: {day.date}</p>
+          <h3>{formatDateTime(day.date)}</h3>
           <p>Temperature: {day.day.avgtemp_c}°C</p>
           <p>Weather: {day.day.condition.text}</p>
         </div>
