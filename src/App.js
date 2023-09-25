@@ -1,7 +1,8 @@
 import './App.css';
-import SearchCity from './components/SearchCity';
-import Weather from './components/WeatherFather';
 import React from 'react';
+import HomePage from './pages/HomePage';
+import { Route, Routes } from 'react-router-dom';
+
 
 
 // Page that return the weather of a given city
@@ -15,10 +16,7 @@ class App extends React.Component{
   render(){
     return (
       <div>
-        <h1>Weather app</h1>
-        <h3>The current weather is:</h3>
-        {/* Render the Weather component */}
-        <Weather />
+        <HomePage/>
       </div>
     )
   }
