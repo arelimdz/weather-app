@@ -1,7 +1,8 @@
 import './App.css';
 import React from 'react';
 import HomePage from './pages/HomePage';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Router, Routes } from 'react-router-dom';
+import ForecastPage from './pages/ForecastPage';
 
 
 
@@ -11,16 +12,39 @@ import { Route, Routes } from 'react-router-dom';
 // Display wheater condition: text and icon
 // Forescast between 1 to 10
 
-class App extends React.Component{
 
-  render(){
-    return (
-      <div>
-        <HomePage/>
-      </div>
-    )
-  }
+function App(){
+
+  return (
+    <div className="App">
+
+      <h1>This is show everywere</h1>
+
+      <Routes>
+        <Route path="/" element={<HomePage/>} />
+        <Route path="/forecast" element={<ForecastPage/>}/>
+      </Routes>
+
+    </div>
+  )
+
+
+
+
 }
+
+// class App extends React.Component{
+
+//   render(){
+//     return (
+//       <div>
+//         <Routes>
+//           <Route path="/" element={<HomePage />} /> 
+//         </Routes>
+//       </div>
+//     )
+//   }
+// }
 
 export default App;
 

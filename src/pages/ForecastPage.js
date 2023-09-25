@@ -1,9 +1,7 @@
-import BusinessCardParent from "../BusinessCardParent";
 import Weather from "../components/WeatherFather";
 
-export default function BusinessCardPage(props){
+export default function ForecastPage(props){
 	return(
-
         <div>
             <Weather />
         </div>
