@@ -1,7 +1,7 @@
-import './App.css';
+
 import React from 'react';
 import HomePage from './pages/HomePage';
-import { Route, Router, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import ForecastPage from './pages/ForecastPage';
 
 
@@ -27,24 +27,7 @@ function App(){
 
     </div>
   )
-
-
-
-
-}
-
-// class App extends React.Component{
-
-//   render(){
-//     return (
-//       <div>
-//         <Routes>
-//           <Route path="/" element={<HomePage />} /> 
-//         </Routes>
-//       </div>
-//     )
-//   }
-// }
+  }
 
 export default App;
 
