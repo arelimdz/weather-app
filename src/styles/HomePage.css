@@ -2,8 +2,9 @@
 
 .AppName {
     font-family: 'Poppins', sans-serif;
+    
     font-weight: 600;
-    color: #fbdb0d;
+    color: #ffffff;
     font-size: 2rem;
     text-align: center;
     padding: 10px;
@@ -25,7 +26,7 @@
     width: 200px;
     border: transparent;
     border-radius: 1rem ;
-    background-color: #1578c3;
+    background-color: #3e1364;
     font-family: 'Inconsolata', monospace;
     color: #ffffff;
     font-weight: 600;
@@ -45,7 +46,8 @@ body {
     height: 100vw;
     width: auto;
 	padding: 100px 0;
-    background: linear-gradient(to bottom , #137db7, #2191cd,#76cbed, #b1e5fa, #dcf3fd); 
+    background: linear-gradient(to bottom ,  #010a43,  #551095, #b277e0, #f6c5ef, #fff9fd); 
+    /* background: linear-gradient(to bottom , #137db7,#76cbed, #f6fcff);  */
 }
 
 /*Time to finalise the cloud shape*/
