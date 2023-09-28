@@ -1,5 +1,6 @@
 
 import React from 'react';
+import "./styles/App.css"
 import HomePage from './pages/HomePage';
 import { Route, Routes } from 'react-router-dom';
 import ForecastPage from './pages/ForecastPage';

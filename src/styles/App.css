@@ -1,0 +1,55 @@
+
+*{ margin: 0; padding: 0;}
+
+body {
+	/*To hide the horizontal scroller appearing during the animation*/
+	overflow: hidden;
+}
+
+.App{
+    height: 100vw;
+    width: auto;
+	padding: 100px 0;
+    background: linear-gradient(to bottom , #000526,  #551095, #b277e0 , #f3bfeb, #f9e8f3 , #fdfdfd); 
+}
+
+.title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+
+} 
+
+.subtitle {
+    font-family: 'Inconsolata', monospace;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+
+.btn {
+    box-sizing: border-box;
+    height: 30px;
+    width: 200px;
+    appearance: none;
+    background-color: transparent;
+    border: 3px solid #ffffff;
+    border-radius: 3rem;
+    color: #ffffff;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+
+  
+    &:hover,
+    &:focus {
+        color:  #551095;
+        outline: 0;
+    }
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+    &:hover {
+        box-shadow: 0 0 40px 40px  #ffffff inset;
+        background-color: #ffffff;
+    }
+}
+
