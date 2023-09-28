@@ -1,9 +1,10 @@
-import Weather from "../components/WeatherFather";
+import WeatherParent from "../components/WeatherFather";
 
-export default function ForecastPage(props){
+
+export default function ForecastPage(){
 	return(
         <div>
-            <Weather />
+            <WeatherParent />
         </div>
 	)
 }

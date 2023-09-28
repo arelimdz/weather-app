@@ -1,43 +1,37 @@
-// import React, { Component } from "react";
+
 import { useState } from "react";
 
 
-export default function SearchCity({ onCityInputChange }){
-
-    const [city, setCity] = useState('');
-
-    const handleSubmit =(event)=>{
-        event.preventDefault();
+function SearchCity({ onUpdateWeather }) {
+    const [city, setCity] = useState("");
+  
+    const handleSearch = () => {
+      onUpdateWeather(city);
     };
-
-    const handleChangeCity = (event) => {
-        const newCity = event.target.value;
-        setCity(newCity);
-
-        // Call the callback function to pass the value to the parent
-        onCityInputChange(newCity);
-    };
-
+  
     return (
-        <div>
-            <form onSubmit={handleSubmit}>
-                <input 
-                    type="text" 
-                    name='city'
-                    placeholder='Enter City'
-                    value={city}
-                    onChange={handleChangeCity}/>
-                    <button className="searchButton" type="submit">Search</button>
-            </form>
-        </div>
+      <div>
+        <h2>Search for Weather</h2>
+        <input
+          type="text"
+          placeholder="Enter city name"
+          value={city}
+          onChange={(e) => setCity(e.target.value)}
+        />
+        <button onClick={handleSearch}>Search</button>
+      </div>
     );
 }
 
 
+export default SearchCity;
 
 
 
 
+// *** SAME CODE AS ABOVE BUT USING CLASS COMPONENT ***
+
+// import React, { Component } from "react";
 
 // class SearchCity extends Component{
 //     constructor(props){
