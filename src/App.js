@@ -17,9 +17,6 @@ function App(){
 
   return (
     <div className="App">
-
-      <h1>This is show everywere</h1>
-
       <Routes>
         <Route path="/" element={<HomePage/>} />
         <Route path="/forecast" element={<ForecastPage/>}/>

@@ -1,32 +1,19 @@
-import SearchCity from "../components/SearchCity";
 import "../styles/HomePage.css";
 
 
 export default function HomePage(props){
 
 	return(	
-		<div id="background-wrap">
-			
-			<div className="x1">
-				<div className="cloud"></div>
+		<div id="clouds">
+			<div className="cloud x1"></div>
+			<div className="weatherLink">
+				<h1 className="AppName">Weather finder</h1>
+				<button className="SearchWeathers">Search weather</button>
 			</div>
-
-			<div className="x2">
-				<div className="cloud"></div>
-			</div>
-			<h1 className="AppName">SkyPallete</h1>
-
-			<div className="x3">
-				<div className="cloud"></div>
-			</div>
-
-			<div className="x4">
-				<div className="cloud"></div>
-			</div>
-
-			<div className="x5">
-				<div className="cloud"></div>
-			</div>
-		</div>
+			<div className="cloud x2"></div>
+			<div className="cloud x3"></div>
+			<div className="cloud x4"></div>
+			<div className="cloud x5"></div>
+		</div>		
 	)
 }

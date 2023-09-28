@@ -73,6 +73,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 # Atributions:
 
-### HomePure CSS Animated Clouds by Mark Bowley
-Retrieve from: https://codepen.io/Mark_Bowley/pen/LYZEBq 
+###  Clouds css3 transition infinite loop by Oscar Bustos | CodePen Home
+Retrieve from: https://codepen.io/elchiconube/pen/naxOWv
 
