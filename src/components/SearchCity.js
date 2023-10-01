@@ -1,4 +1,5 @@
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { useState } from "react";
 
 
@@ -8,17 +9,28 @@ function SearchCity({ onUpdateWeather }) {
     const handleSearch = () => {
       onUpdateWeather(city);
     };
+
+    function toggleShow () {
+      var el = document.getElementById("box");
+      el.classList.toggle("show");
+    }
+    const handleSearchAndToggleShow = () => {
+      handleSearch();
+      toggleShow();
+    };
   
     return (
-      <div>
-        <h2>Search for Weather</h2>
+      <div className="searchbox">
         <input
+        id='box'
+          className="input_containter subtitle"
           type="text"
-          placeholder="Enter city name"
+          placeholder="Search city"
           value={city}
           onChange={(e) => setCity(e.target.value)}
         />
-        <button onClick={handleSearch}>Search</button>
+        {/* <button className="search-btn" onClick={handleSearch}>Search</button> */}
+        <FontAwesomeIcon className='search_icon' icon={faMagnifyingGlass}  onClick={handleSearchAndToggleShow } />
       </div>
     );
 }

@@ -22,3 +22,28 @@ export default function HomePage(props){
 		</div>		
 	)
 }
+
+
+// *** TO USE TO RENDER:
+// --- Current time & Date
+// --- Weather of current location (user location)
+
+// import { createBrowserRouter, RouterProvider, useLoaderData } from "react-router-dom";
+// function App(){
+//     const routes = createBrowserRouter([
+//         {
+//             path: "/",
+//             element: <Homepage />,
+//             loader: async () => {
+//                 // Make an API request here.
+//                 // return whatever data you want
+//                 // and it will be available to the rendered component
+//                 return {example:"Example data router data here!"}
+//             }
+//         }
+//     ]);
+
+//     return(
+//         <RouterProvider router={routes} />
+//     )
+// }
