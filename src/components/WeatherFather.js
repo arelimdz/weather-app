@@ -1,36 +1,23 @@
 import SearchCity from './SearchCity';
-import formatDateTime from "../utils/formatLocalTime";
-import TenDayForecast from "./TenDayForecast";
-import { useState, useEffect } from "react";
-import useWeatherFetch from "../utils/fetchWeather"
 
-function WeatherDisplay({ ApiData }) {
-  if (!ApiData) {
-    return 
-  }
-
-  return (
-    <div>
-      <h3>Weather in {ApiData.location.name}</h3>
-      <h5> {ApiData.location.region}, {ApiData.location.country}</h5>
-      {/* Render other weather information here */}
-    </div>
-  );
-}
+import { useState} from "react";
+import useWeatherFetch from "../utils/fetchWeather";
+import WeatherDisplay from "./WeatherDisplay";
 
 
 export default function WeatherParent(){
   const [city, setCity] = useState("");
+
+  // Call the weather fetch component to use  "weatherData"
   const {weatherData, loading, error} = useWeatherFetch(city);
 
-  const handleUpdateWeather = (newCity) => {
+  const handleUpdateCity = (newCity) => {
     setCity(newCity);
   };
-  console.log(weatherData)
 
   return (
     <div>
-      <SearchCity onUpdateWeather={handleUpdateWeather} />
+      <SearchCity onUpdateCity={handleUpdateCity} />
       {loading ? (
         // Display a loading message if data loading
         <p>Loading...</p>
@@ -44,10 +31,6 @@ export default function WeatherParent(){
     </div>
   );
 }
-
-
-
-
 
 
 

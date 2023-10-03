@@ -3,14 +3,12 @@ import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { useState } from "react";
 
 
-function SearchCity({ onUpdateWeather }) {
+function SearchCity({ onUpdateCity }) {
     const [city, setCity] = useState("");
   
     const handleSearch = () => {
-      onUpdateWeather(city);
+      onUpdateCity(city);
     };
-
-    
 
   
     return (
