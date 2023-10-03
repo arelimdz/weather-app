@@ -10,27 +10,19 @@ function SearchCity({ onUpdateWeather }) {
       onUpdateWeather(city);
     };
 
-    function toggleShow () {
-      var el = document.getElementById("box");
-      el.classList.toggle("show");
-    }
-    const handleSearchAndToggleShow = () => {
-      handleSearch();
-      toggleShow();
-    };
+    
+
   
     return (
       <div className="searchbox">
         <input
-        id='box'
           className="input_containter subtitle"
           type="text"
-          placeholder="Search city"
+          placeholder="Search"
           value={city}
           onChange={(e) => setCity(e.target.value)}
         />
-        {/* <button className="search-btn" onClick={handleSearch}>Search</button> */}
-        <FontAwesomeIcon className='search_icon' icon={faMagnifyingGlass}  onClick={handleSearchAndToggleShow } />
+        <FontAwesomeIcon className='search_icon' icon={faMagnifyingGlass}  onClick={handleSearch} />
       </div>
     );
 }

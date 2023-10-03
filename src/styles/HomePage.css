@@ -7,13 +7,15 @@
     z-index: 1;
 }
 
+
 .weatherLink{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+	display: grid;
+	align-content: center;
+	justify-content: center;
+	width: 100vw;	
     padding: 10px;
 }
+
 
 
 /*Time to finalise the cloud shape*/

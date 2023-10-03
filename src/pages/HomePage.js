@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import "../styles/HomePage.css";
+import WeatherParent from '../components/WeatherFather';
 
 
 export default function HomePage(props){
@@ -10,10 +11,7 @@ export default function HomePage(props){
 			<div className="cloud x1"></div>
 			<div className="weatherLink">
 				<h1 className="AppName title">Weather finder</h1>
-				<Link to="/forecast">
-					<button className="btn subtitle">Search weather</button>
-				</Link>
-				
+				<WeatherParent />
 			</div>
 			<div className="cloud x2"></div>
 			<div className="cloud x3"></div>

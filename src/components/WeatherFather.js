@@ -6,11 +6,7 @@ import useWeatherFetch from "../utils/fetchWeather"
 
 function WeatherDisplay({ ApiData }) {
   if (!ApiData) {
-    return (
-      <div>
-        <p>No weather data available</p>
-      </div>
-    );
+    return 
   }
 
   return (
@@ -34,7 +30,6 @@ export default function WeatherParent(){
 
   return (
     <div>
-      <h1>Weather App</h1>
       <SearchCity onUpdateWeather={handleUpdateWeather} />
       {loading ? (
         // Display a loading message if data loading

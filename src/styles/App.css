@@ -17,7 +17,6 @@ body {
     font-family: 'Poppins', sans-serif;
     font-size: 2rem;
     font-weight: 600;
-
 } 
 
 .subtitle {
@@ -39,7 +38,6 @@ body {
     cursor: pointer;
     text-decoration: none;
     text-align: center;
-
   
     &:hover,
     &:focus {
@@ -51,30 +49,43 @@ body {
         box-shadow: 0 0 40px 40px  #ffffff inset;
         background-color: #ffffff;
     }
-}
+}   
 
 
 .searchbox{
-    width: 300px;
+    width: 100px;
     height: 30px;
-    background-color: #ffffff;
-  /*   margin: 20vh auto; */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    background-color: transparent;
     border-radius: 4rem;
+    border: 3.5px solid #ffffff;
     padding: 5px;
+    margin: 20px 0px;
+    align-self: center;
+
+    /* for elements in the div */
     display:flex;
     align-items:center;
     justify-content: flex-start;
 
+    transition: 1s ease-in-out;
+
+    &:hover, &:focus {
+        width: 200px;
+        background-color: #551095;
+        
+    }
+
+}
+
+@keyframes change_color{
+    from {background-color: transparent;}
+    to{background-color: #551095}
 }
 
 
 .input_containter{
-    width: 90%;
-    color: #000526;
+    width: 100%;
+    color: #fdfdfd;
     border: none;
     outline: none;
     background: none;
@@ -84,6 +95,29 @@ body {
     padding-left: 0.5rem;
     display: inline-block;
 
+
+
+}
+
+
+/* Placeholder color change  for different browsers*/
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #f9e8f3be;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #f9e8f3be;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #f9e8f3be;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color:    #f9e8f3be;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+    color:    #f9e8f3be;
+}
+::placeholder { /* Most modern browsers support this now. */
+    color:    #f9e8f3be;
 }
 
 
@@ -99,7 +133,7 @@ body {
     color: #ffffff;
 
     &:hover {
-        transform: scale(1.5);
+        transform: scale(1.75);
     }
 
 }
