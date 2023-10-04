@@ -2,7 +2,7 @@
 import React from 'react';
 import "./styles/App.css"
 import HomePage from './pages/HomePage';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes } from "react-router-dom";
 import ForecastPage from './pages/ForecastPage';
 
 
@@ -18,11 +18,11 @@ function App(){
 
   return (
     <div className="App">
-      <Routes>
-        <Route path="/" element={<HomePage/>} />
-        <Route path="/forecast" element={<ForecastPage/>}/>
-      </Routes>
 
+        <Routes >
+          <Route path="/" element={<HomePage/>} />
+          <Route path="/forecast" element={<ForecastPage/>}/>
+        </Routes>
     </div>
   )
   }
