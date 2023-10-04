@@ -1,17 +1,22 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import {  Navigate , useNavigate} from 'react-router-dom';
 import "../styles/HomePage.css";
-import WeatherParent from '../components/WeatherFather';
+import WeatherParent from '../components/WeatherParent';
 
 
 export default function HomePage(props){
+	const navigate = useNavigate();
+	const handleClick = () => navigate('/forecast');
+
 
 	return(	
 		<div classNAme="App">
 			<div className="cloud x1"></div>
 			<div className="weatherLink">
 				<h1 className="AppName title">Weather finder</h1>
-				<WeatherParent />
+				<button className='btn' type='button' onClick={handleClick}>
+					Search city weather
+				</button>
 			</div>
 			<div className="cloud x2"></div>
 			<div className="cloud x3"></div>
