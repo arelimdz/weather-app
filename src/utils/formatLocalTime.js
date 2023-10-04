@@ -1,5 +1,5 @@
 
-function formatDateTime(localTime) {
+function formatDateTime(type, localTime) {
   const date = new Date(localTime);
 
   const day = date.toLocaleString("en-US", { weekday: "short" });
@@ -15,13 +15,18 @@ function formatDateTime(localTime) {
     return "";
   }
 
-  if (localTime.includes(":")) {
-    // If the localTime contains a colon (":"), it's a date with time
+  if (type === "date-time") {
     return `${day} ${dayOfMonth} ${month} ${hours}:${minutes} ${period}`;
-  } else {
-    // Otherwise, it's just a date
+  } else if (type === "date") {
     return `${day} ${dayOfMonth} ${month}`;
+  }
+  else if (type==="short-time"){
+      return `${hours}${period}`
+  }
+  else {
+      return `${hours} : ${minutes} ${period}`
   }
 }
 
 export default formatDateTime;
+
