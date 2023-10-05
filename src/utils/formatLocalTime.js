@@ -8,7 +8,7 @@ function formatDateTime(type, localTime) {
 
   const hours = date.getHours() % 12 || 12; // Convert to 12-hour format
   const minutes = date.getMinutes();
-  const period = date.getHours() >= 12 ? "p.m." : "a.m.";
+  const period = date.getHours() >= 12 ? "PM" : "AM";
 
   if (isNaN(date)) {
     // If the date is invalid, return an empty string
