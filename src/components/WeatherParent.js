@@ -17,7 +17,7 @@ export default function WeatherParent(){
   };
 
   return (
-    <div>
+    <div className='Parent'>
       <SearchCity onUpdateCity={handleUpdateCity} />
       {loading ? (
         // Display a loading message if data loading

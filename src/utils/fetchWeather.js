@@ -28,7 +28,7 @@ export default function useWeatherFetch(city) {
             setWeatherData(data);
         } catch (error) {
         console.error ("Error fetching weather data: ", error);
-        setError("Error fetching weather data.");
+        setError("Location not found.");
         } finally {
         setLoading(false);
         }

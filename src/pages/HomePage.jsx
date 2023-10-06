@@ -13,7 +13,6 @@ export default function HomePage(props){
 		<div classNAme="App">
 			<div className="cloud x1"></div>
 			<div className="weatherLink">
-				<h1 className="AppName title">Weather finder</h1>
 				<button className='btn' type='button' onClick={handleClick}>
 					Search city weather
 				</button>

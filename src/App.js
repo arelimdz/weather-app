@@ -18,7 +18,7 @@ function App(){
 
   return (
     <div className="App">
-
+      	<h1 className="AppName title">Weather finder</h1>
         <Routes >
           <Route path="/" element={<HomePage/>} />
           <Route path="/forecast" element={<ForecastPage/>}/>
