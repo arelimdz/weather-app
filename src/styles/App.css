@@ -1,45 +1,42 @@
+body{
+    margin: 0;
+}
 
-body {
-	/*To hide the horizontal scroller appearing during the animation*/
-	overflow: auto;
-	background: linear-gradient(to bottom , #000526,  #551095, #b277e0 , #f3bfeb); 
+.App{
+    overflow: hidden;
+	/* padding: 100px 0; */
+    overflow: auto;
+	background: linear-gradient(to bottom, #000526, #551095, #b277e0 , #dfb0d8); 
 	height:  100vh;;
     width: 100%;
 	margin: 0;
 	padding: 0;
 	background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.Parent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .AppName {
     color: #ffffff;
+    width: 100%;
     text-align: center;
-    padding: 10px;
-    margin: 0%;
-    z-index: 1;
-}
-
-
-.weatherLink{
-	display: grid;
-	align-content: center;
-	justify-content: center;
-	width: 100vw;	
-    padding: 10px;
-}
-
-
-.App{
-    overflow: hidden;
-    height: auto;
-    width: auto;
-	padding: 100px 0;
-}
-
-.title {
+    margin-top: 40px;
+    padding: 20px 0px;
     font-family: 'Poppins', sans-serif;
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 600;
-} 
+    z-index: 1;
+    position: relative;
+}
+
+
 
 .subtitle {
     font-family: 'Inconsolata', monospace;
@@ -73,16 +70,20 @@ body {
     }
 }   
 
+/* SEARCH BOX ELEMENT */
 
 .searchbox{
-    width: 200px;
+    width: 300px;
     height: 30px;
-    background-color: transparent;
+    background-color: #340e69b3;
     border-radius: 4rem;
     border: 3.5px solid #ffffff;
     padding: 5px;
-    margin: 20px 0px;
+    margin: 20px;
     align-self: center;
+    z-index: 1;
+    position: relative;
+
 
     /* for elements in the div */
     display:flex;
@@ -132,9 +133,6 @@ body {
 
 .search_icon{
     display: inline-block;
-    /* position: relative;
-    left: -165px; */
-    
     box-sizing: border-box;
     font-size: 1rem;
     cursor: pointer;
@@ -145,7 +143,8 @@ body {
     color: #ffffff;
 
     &:hover {
-        background-color: #551095;
+        background-color: #2eacc8 ;
+        color:#ffffff;
     }
 
 }
