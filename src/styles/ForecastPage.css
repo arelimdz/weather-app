@@ -1,0 +1,205 @@
+
+
+.Parent{
+	width: auto;
+    height: auto;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Inconsolata', monospace;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+
+
+/* Current weather info */
+
+h1{
+    font-size: 4rem;
+    font-weight: 600;
+    margin: 0px;
+}
+
+h2{
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 0px;
+}
+
+h3{
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0px;
+}
+
+
+/* Daily forecast component */
+
+.dforecast_container{
+    background-color: #0005269f;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1.5rem;
+    align-items: center;
+    margin: 10px;
+    padding: 20px 20px;
+    overflow: scroll;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.dforecast{
+    box-sizing: border-box;
+    width: 100%;
+}
+.dforecast p {
+    padding: 0;
+    align-self: center;
+}
+
+.forecast {
+    text-align: center;
+    font-size: 1rem;
+    padding: 0px;
+    display: grid;
+    row-gap: 10px;
+    grid-template-columns: repeat(3, 1fr); /* Create 3 equal columns */
+    grid-auto-columns: minmax(0, 1fr); /* Set equal column size */
+    align-items: stretch; 
+}
+
+.dcontent {
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1; /* Lower z-index for the content container */
+    padding: 10px 0px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.dicontet p{
+    padding: 0%;
+
+}
+
+.dicon{
+    width: 2.5rem;
+    z-index: 2;
+}
+
+.temp_container{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.bar{
+    width: 80px;
+    height: .25em;
+    border-radius: 2rem;
+    margin: 10px 10px;
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(to left , #ff4d40,  #fde245, #56e9ff , #0080ff);
+}
+
+.dot{
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background: #edecec;
+    z-index: 2;
+
+    /* move dot on bar */
+    position: absolute;
+    bottom: -100%; /* Vertically center the dot within the bar */
+    transform: translateX(-50%); /* Center the dot horizontally */
+
+}
+
+
+/* Weather Display - HOURLY FORECAST COMPONENT */
+
+.hforecast_container{
+    background-color: #0005269f;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1.5rem;
+    align-items: center;
+    margin: 10px;
+    padding: 0px 20px;
+    overflow: scroll;
+    font-family: 'Poppins', sans-serif;
+}
+
+.forecast_title{
+    box-sizing: border-box;
+    position: relative;
+    color: rgba(210, 207, 207, 0.761);
+    font-weight: 400;
+    display: inline-flex;
+    align-items: center;
+    padding: 0px 10px;
+    margin: 0px;
+}
+
+.hforecast_list{
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    padding: 0px 10px 20px 10px;
+    overflow: auto;
+}
+
+
+.card-hforecast {
+    color: white;
+    display: flex;
+    flex-direction: column; /* Display children in a column layout */
+    text-align: center;
+    padding: 0px 10px;
+    position: relative;
+}
+  
+.content {
+    position: relative;
+    z-index: 1; /* Lower z-index for the content container */
+    padding: 10px 0px;
+}
+  
+.temp, .time , .rain{
+    font-size: 0.75rem;
+    font-weight: 400;
+    margin: 0px 0px;
+}
+  
+.temp {
+    font-size: 1rem;
+}
+  
+.icon {
+    width: 2.5rem;
+    z-index: 2; /* Higher z-index for the icon */
+}
+  
+.rain {
+    z-index: 3; /* Higher z-index for the rain element */
+    color: rgb(166, 166, 255);
+    position: absolute;
+    font-weight: 600;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+  
+
+
+
