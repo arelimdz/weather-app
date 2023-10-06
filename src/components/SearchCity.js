@@ -9,6 +9,12 @@ function SearchCity({ onUpdateCity }) {
     const handleSearch = () => {
       onUpdateCity(city);
     };
+    // To change city when pressing enter
+    const handleKeyPress = (e) => {
+      if (e.key === 'Enter') {
+        onUpdateCity(city);
+      }
+    };
 
   
     return (
@@ -19,6 +25,7 @@ function SearchCity({ onUpdateCity }) {
           placeholder="Search"
           value={city}
           onChange={(e) => setCity(e.target.value)}
+          onKeyPress={handleKeyPress}
         />
         <FontAwesomeIcon className='search_icon' icon={faMagnifyingGlass}  onClick={handleSearch} />
       </div>
