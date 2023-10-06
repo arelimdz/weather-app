@@ -21,6 +21,7 @@ export default function WeatherDisplay({ ApiData }) {
 
     return (
       <div className="Display">
+
         <h2>{ApiData.location.name}</h2>
         <h3>{ApiData.current.condition.text}</h3>
         <h1>{ApiData.current.temp_c}°C</h1>

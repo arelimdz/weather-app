@@ -21,7 +21,7 @@ export default function WeatherParent(){
       <SearchCity onUpdateCity={handleUpdateCity} />
       {loading ? (
         // Display a loading message if data loading
-        <p>Loading...</p>
+        <p className='loading'>Loading...</p>
       ) : error ? (
         // Display an error message if an error occurred
         <p>{error}</p>
