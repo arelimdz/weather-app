@@ -1,9 +1,17 @@
 
-*{ margin: 0; padding: 0;}
-
+body {
+	/*To hide the horizontal scroller appearing during the animation*/
+	overflow: auto;
+	background: linear-gradient(to bottom , #000526,  #551095, #b277e0 , #f3bfeb); 
+	height:  100vh;;
+    width: 100%;
+	margin: 0;
+	padding: 0;
+	background-repeat: no-repeat;
+}
 
 .App{
-    overflow: auto;
+    overflow: hidden;
     height: auto;
     width: auto;
 	padding: 100px 0;
