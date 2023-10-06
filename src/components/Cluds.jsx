@@ -4,7 +4,7 @@ import "../styles/Clouds.css";
 export default function Clouds(){
 
 	return(	
-		<div >
+		<div classNAme="clouds_container">
 			<div className="cloud x1"></div>
 			<div className="cloud x2"></div>
 			<div className="cloud x3"></div>

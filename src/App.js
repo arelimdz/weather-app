@@ -8,9 +8,9 @@ function App(){
 
   return (
     <div className="App">
-        <Clouds classNAme="clouds_container"/>
-        <h1 className="AppName title">Weather finder</h1>
+        <h1 className="AppName">Weather finder</h1>
         <WeatherParent/>
+        <Clouds />
     </div>
   )
   }
