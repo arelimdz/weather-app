@@ -9,38 +9,18 @@ export default function HourlyForecast ({ data }){
 
 
     return (
-      <div className="card-hforecast">
-        <p>{formatDateTime("short-time", data.time )}</p>
-                     <p>{data.temp_c} °C</p>
-                     <img src={data.condition.icon} alt="api icon" />
-                     {
-                        data.chance_of_rain >= 1 &&
-                         (
-                             <p>Raining: {data.chance_of_rain}%</p> 
-                         )
-                     }
-                     <p>condition text: {data.condition.text}</p>
+        <div className="card-hforecast">
+            <h4 className="time">{formatDateTime("short-time", data.time )}</h4>
+            <div className="content">
+                <img className="icon" src={data.condition.icon} alt="api icon" />
+                {data.chance_of_rain >= 1 &&
+                    (
+                        <h4 className="rain">{data.chance_of_rain}%</h4> 
+                    )
+                }
+            </div>
 
-      </div>  
+            <h3 className="temp">{data.temp_c}°C</h3>
+        </div>  
     )
-    // return (
-    //     <div className="hforecast_card">
-
-    //         {data.forecast.forecastday[0].hour.map((hour, index) => (
-    //             <div key={index}>
-    //                 <p>{formatDateTime("short-time", hour.time )}</p>
-    //                 <p>{hour.temp_c} °C</p>
-    //                 <img src={hour.condition.icon} alt="api icon" />
-    //                 {
-    //                     hour.chance_of_rain >= 1 &&
-    //                     (
-    //                         <p>Raining: {hour.chance_of_rain}%</p> 
-    //                     )
-    //                 }
-    //                 <p>condition text: {hour.condition.text}</p>
-
-    //             </div>
-    //         ))}
-    //     </div>
-    // )
 }
