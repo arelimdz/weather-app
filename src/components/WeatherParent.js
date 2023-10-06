@@ -2,7 +2,7 @@ import SearchCity from './SearchCity';
 import { useState} from "react";
 import useWeatherFetch from "../utils/fetchWeather";
 import WeatherDisplay from "./WeatherDisplay";
-import GoBack from './GoBackButton';
+import "../styles/Forecast.css"
 
 
 
@@ -29,7 +29,6 @@ export default function WeatherParent(){
         // Display the weather data if there are not errors and data is laoaded
         <WeatherDisplay ApiData ={weatherData} />
       )}
-      <GoBack/>
     </div>
   );
 }

@@ -10,6 +10,24 @@ body {
 	background-repeat: no-repeat;
 }
 
+.AppName {
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    margin: 0%;
+    z-index: 1;
+}
+
+
+.weatherLink{
+	display: grid;
+	align-content: center;
+	justify-content: center;
+	width: 100vw;	
+    padding: 10px;
+}
+
+
 .App{
     overflow: hidden;
     height: auto;

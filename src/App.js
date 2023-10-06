@@ -1,9 +1,8 @@
 
 import React from 'react';
 import "./styles/App.css"
-import HomePage from './pages/HomePage';
-import { Route, Routes } from "react-router-dom";
-import ForecastPage from './pages/ForecastPage';
+import WeatherParent from './components/WeatherParent';
+import Clouds from './components/Cluds';
 
 
 
@@ -18,11 +17,9 @@ function App(){
 
   return (
     <div className="App">
-      	<h1 className="AppName title">Weather finder</h1>
-        <Routes >
-          <Route path="/" element={<HomePage/>} />
-          <Route path="/forecast" element={<ForecastPage/>}/>
-        </Routes>
+        <Clouds classNAme="clouds_container"/>
+        <h1 className="AppName title">Weather finder</h1>
+        <WeatherParent/>
     </div>
   )
   }

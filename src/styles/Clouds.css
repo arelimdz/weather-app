@@ -1,22 +1,9 @@
-
-.AppName {
-    color: #ffffff;
-    text-align: center;
-    padding: 10px;
-    margin: 0%;
-    z-index: 1;
+.clouds_container{
+	height: 50%;
+	padding: 20px 10px;
+	overflow: hidden;
+	margin: 0;
 }
-
-
-.weatherLink{
-	display: grid;
-	align-content: center;
-	justify-content: center;
-	width: 100vw;	
-    padding: 10px;
-}
-
-
 
 /*Time to finalise the cloud shape*/
 .cloud {
