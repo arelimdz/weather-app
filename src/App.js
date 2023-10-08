@@ -8,9 +8,10 @@ function App(){
 
   return (
     <div className="App">
+        {/* <Clouds /> */}
         <h1 className="AppName">Weather finder</h1>
         <WeatherParent/>
-        <Clouds />
+
     </div>
   )
   }

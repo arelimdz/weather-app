@@ -1,6 +1,7 @@
 
 function formatDateTime(type, localTime) {
-  const date = new Date(localTime);
+  const localTimeStandardFormat = localTime.replace(' ', 'T') + ':00';
+  const date = new Date(localTimeStandardFormat);
 
   const day = date.toLocaleString("en-US", { weekday: "short" });
   const dayOfMonth = date.getDate();
