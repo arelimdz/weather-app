@@ -12,6 +12,7 @@ return (
       {weatherData.forecast.forecastday.map((day, index) => (
         <div key={index} className="forecast">
           <p>{formatDateTime("date",day.date)}</p>
+          <p className="condition_text">{day.day.condition.text}</p>
           <div className="dcontent">
             <img className="icon" src={day.day.condition.icon} alt="icon" />
             {day.day.daily_chance_of_rain >=1 &&

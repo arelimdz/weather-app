@@ -50,10 +50,11 @@ h3{
 /* Daily forecast component */
 
 .dforecast_container{
-    width: auto;
+    width: 50%;
     height: auto ;
-    background-color:#8e59c0c3;
+    background-color:#8e59c0;
     display: flex;
+    align-self: center;
     flex-direction: column;
     border-radius: 1.5rem;
     align-items: center;
@@ -61,8 +62,9 @@ h3{
     padding: 20px 20px;
     overflow: scroll;
     font-family: 'Poppins', sans-serif;
-}
 
+    
+}
 
 .dforecast{
     box-sizing: border-box;
@@ -76,12 +78,13 @@ h3{
 .forecast {
     text-align: center;
     font-size: 1rem;
+    align-self: center;
     padding: 0px;
     display: grid;
     row-gap: 10px;
-    grid-template-columns: repeat(3, 1fr); /* Create 3 equal columns */
-    grid-auto-columns: minmax(0, 1fr); /* Set equal column size */
-    align-items: stretch; 
+    grid-template-columns: repeat(4, 1fr); 
+    grid-auto-columns: minmax(0, 1fr); 
+    
 }
 
 .dcontent {
@@ -110,7 +113,7 @@ h3{
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 100%;
+    /* width: 100%; */
     padding: 10px 0;
 }
 
@@ -143,9 +146,10 @@ h3{
 
 .hforecast_container{
     height: auto;
-    width: auto;
-    background-color: #8e59c0c3;
+    width: 50%;
+    background-color: #8e59c0;
     display: flex;
+    align-self: center;
     flex-direction: column;
     border-radius: 1.5rem;
     align-items: center;
@@ -220,3 +224,35 @@ h3{
 
 
 
+/* Adjust width for screens with a width of 600 pixels or less (small devices) */
+@media screen and (max-width: 600px) {
+    .dforecast_container {
+        width: 85%;
+         
+    }
+    .hforecast_container {
+        width: 85%;
+    }
+    .forecast {
+        grid-template-columns: repeat(3, 1fr); 
+    }
+}
+
+/* Adjust width for screens with a width of 400 pixels or less (extra-small devices) */
+@media screen and (max-width: 400px) {
+    .dforecast_container {
+        width: 90%;
+        grid-template-columns: repeat(3, 1fr); 
+
+    }
+
+    .hforecast_container {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .condition_text {
+        display: none;
+    }
+}
