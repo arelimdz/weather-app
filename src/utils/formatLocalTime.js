@@ -1,6 +1,18 @@
-
 function formatDateTime(type, localTime) {
-  const localTimeStandardFormat = localTime.replace(' ', 'T') + ':00';
+  let localTimeStandardFormat;
+
+  // Check the input date format and convert it to a standard format
+  if (/\d{4}-\d{2}-\d{2} \d{2}:\d{2}/.test(localTime)) {
+    // Format: "YYYY-MM-DD HH:mm"
+    localTimeStandardFormat = localTime.replace(' ', 'T') + ':00';
+  } else if (/\d{4}-\d{2}-\d{2}/.test(localTime)) {
+    // Format: "YYYY-MM-DD"
+    localTimeStandardFormat = localTime + 'T00:00:00';
+  } else {
+    // Assuming the format is already "YYYY-MM-DDTHH:mm:ss"
+    localTimeStandardFormat = localTime;
+  }
+
   const date = new Date(localTimeStandardFormat);
 
   const day = date.toLocaleString("en-US", { weekday: "short" });
@@ -20,12 +32,10 @@ function formatDateTime(type, localTime) {
     return `${day} ${dayOfMonth} ${month} ${hours}:${minutes} ${period}`;
   } else if (type === "date") {
     return `${day} ${dayOfMonth} ${month}`;
-  }
-  else if (type==="short-time"){
-      return `${hours}${period}`
-  }
-  else {
-      return `${hours} : ${minutes} ${period}`
+  } else if (type === "short-time") {
+    return `${hours}${period}`;
+  } else {
+    return `${hours} : ${minutes} ${period}`;
   }
 }
 
