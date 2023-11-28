@@ -1,74 +1,85 @@
-# Getting Started with Create React App
+# Weather App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+Welcome to the Weather App project! Build using the Create React App tool, this application provides users with the ability to conveniently check the current weather and forecast for specific locations through the **WeatherAPI.com** service. As a modest React app, its purpose is to serve as a practical platform for refining API integration skills. The focus is on simplicity and functionality, offering users an efficient way to explore weather information.
 
-In the project directory, you can run:
 
-### `npm start`
+## Prerequisites
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+*Before you get started, ensure you have the following:*
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* Node.js installed on your machine.
+* A free account on [WeatherAPI.com](https://www.weatherapi.com/) to obtain an API key.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Setup Instructions
 
-### `npm run build`
+### 1. Clone the Repository
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Clone the Weather App repository to your local machine using the following command:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+git clone https://github.com/arelimdz/weather-app.git
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 2. Create a WeatherAPI.com Account
 
-### `npm run eject`
+Visit [WeatherAPI.com](https://www.weatherapi.com) and create a free account to obtain your API key.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 3. Set Up Environment Variables
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Create a `.env` file in the root of the project and add the following line:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```env
+REACT_APP_API_KEY=your-api-key
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Replace `your-api-key` with the API key you obtained from WeatherAPI.com.
 
-## Learn More
+### 4. Install Dependencies
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Navigate to the project directory and install the required dependencies using:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+cd weather-app
+npm install
+```
 
-### Code Splitting
+### 5. Start the Application
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Run the following command to start the React app:
 
-### Analyzing the Bundle Size
+```bash
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+The app will be accessible at [http://localhost:3000](http://localhost:3000) in your browser.
 
-### Making a Progressive Web App
+## How to Use the Weather App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. **Search for a Location:**
+   - Enter the city name or location in the search bar.
+   - Press Enter or click on the search button.
 
-### Advanced Configuration
+2. **View Weather Information:**
+   - The app will display the current weather conditions for the entered location.
+   - Scroll down to view the extended forecast for the next few days.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+If you would like to contribute to the Weather App project, please follow these steps:
 
-### `npm run build` fails to minify
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them.
+4. Push the changes to your fork.
+5. Submit a pull request.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
+Feel free to report issues or suggest enhancements in the [Issues](https://github.com/arelimdz/weather-app/issues) section.
+
+Happy coding!
 
 
 # Atributions:
