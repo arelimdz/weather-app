@@ -1,7 +1,7 @@
 # Weather App
 
 
-Welcome to the Weather App project! Build using the Create React App tool, this application provides users with the ability to conveniently check the current weather and forecast for specific locations through the **WeatherAPI.com** service. As a modest React app, its purpose is to serve as a practical platform for refining API integration skills. The focus is on simplicity and functionality, offering users an efficient way to explore weather information.
+This project was build using the Create React App tool, the application provides users with the ability to conveniently check the current weather and forecast for specific locations through the **WeatherAPI.com** service. As a modest React app, its purpose is to serve as a practical platform for refining API integration skills. The focus is on simplicity and functionality, offering users an efficient way to explore weather information.
 
 
 ## Prerequisites
