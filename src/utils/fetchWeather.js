@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 
 export default function useWeatherFetch(city) {
 
-    const apiUrl = `http://api.weatherapi.com/v1/forecast.json?key=${process.env.REACT_APP_API_KEY}&q=${city}&days=10&aqi=no&alerts=no`;
+    const apiUrl = `https://api.weatherapi.com/v1/forecast.json?key=${process.env.REACT_APP_API_KEY}&q=${city}&days=10&aqi=no&alerts=no`;
 
     const [weatherData, setWeatherData] = useState(null);
     const [loading, setLoading] = useState(false);
