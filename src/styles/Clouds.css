@@ -1,7 +1,9 @@
 
 
 .clouds_container{
-	margin: 0px;
+	margin: 0px; 
+	height: 0%;
+
 }
 
 /*Time to finalise the cloud shape*/

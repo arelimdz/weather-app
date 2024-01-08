@@ -15,9 +15,11 @@ export default function WeatherDisplay({ ApiData }) {
         return hours
     }
 
-    const allItems = ApiData.forecast.forecastday[0].hour
-    const startingIndex = timeIndexStart()
-    const items = allItems.slice(startingIndex, allItems.length)
+    const currentDayForecast = ApiData.forecast.forecastday[0].hour;
+    const nextDayForecast = ApiData.forecast.forecastday[1].hour;
+    const allItems = currentDayForecast.concat(nextDayForecast);
+    const startingIndex = timeIndexStart();
+    const items = allItems.slice(startingIndex, startingIndex + 24);
 
     return (
       <div className="Display">
@@ -33,9 +35,9 @@ export default function WeatherDisplay({ ApiData }) {
             <p>HOURLY FORECAST</p>
           </div>
           <div className="hforecast_list">
-            {items.map((item) => (
-                  <HourlyForecast  key={item.id} data={item} />
-              ))}
+          {items.map((item, index) => (
+            <HourlyForecast  key={index} data={item} />
+          ))}
           </div>
         </div>
         <div className="dforecast_container">
