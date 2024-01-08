@@ -59,7 +59,7 @@ h3{
 .dforecast_container{
     width: 50%;
     height: auto ;
-    background-color:#23144fa1;
+    background-color:#680a8ac3;
     display: flex;
     align-self: center;
     flex-direction: column;
@@ -153,7 +153,7 @@ h3{
 .hforecast_container{
     height: auto;
     width: 50%;
-    background-color: #23144fa1;
+    background-color:#680a8ac3;
     display: flex;
     align-self: center;
     flex-direction: column;
@@ -168,7 +168,7 @@ h3{
 .forecast_title{
     box-sizing: border-box;
     position: relative;
-    color: #b9a6f3;
+    color: #d9a6f3;
     font-weight: 400;
     display: inline-flex;
     align-items: center;

@@ -5,8 +5,8 @@ body{
 .App{
     overflow: hidden;
     overflow: auto;
-	background: linear-gradient(to bottom,  #7c3ab2, #db695e); 
-    /* background-color: #d59dfc; */
+	/* background: linear-gradient(to bottom,  #631c9c, #eb9ed6);  */
+    background-color:#b88cfa;
 	height:  100vh;
     width: 100%;
 	margin: 0;
@@ -27,7 +27,7 @@ body{
 }
 
 .AppName {
-    color: #ffffff;
+    color: #fcfbfc;
     width: 100%;
     text-align: center;
     margin-top: 40px;
@@ -36,7 +36,9 @@ body{
     font-size: 2.5rem;
     font-weight: 600;
     z-index: 1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     position: relative;
+    
 }
 
 
@@ -76,9 +78,9 @@ body{
 /* SEARCH BOX ELEMENT */
 
 .searchbox{
-    width: 300px;
+    width: 50%;
     height: 30px;
-    background-color: #340e69b3;
+    background-color: #f8eaf9b5;
     border-radius: 4rem;
     border: 3.5px solid #ffffff;
     padding: 5px;
@@ -100,7 +102,7 @@ body{
 
 .input_containter{
     width: 100%;
-    color: #fdfdfd;
+    color: #ab0de5;
     border: none;
     outline: none;
     background: none;
@@ -115,22 +117,22 @@ body{
 
 /* Placeholder color change  for different browsers*/
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-    color:    #f9e8f3be;
+    color:    #725668be;
 }
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-    color:    #f9e8f3be;
+    color:     #725668be;
 }
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
-    color:    #f9e8f3be;
+    color:     #725668be;
 }
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color:    #f9e8f3be;
+    color:     #725668be;
 }
 ::-ms-input-placeholder { /* Microsoft Edge */
-    color:    #f9e8f3be;
+    color:     #725668be;
 }
 ::placeholder { /* Most modern browsers support this now. */
-    color:    #f9e8f3be;
+    color:     #725668be;
 }
 
 
@@ -139,14 +141,14 @@ body{
     box-sizing: border-box;
     font-size: 1rem;
     cursor: pointer;
-    background-color: #b277e0;
+    background-color: transparent;
     transition: all .25s ease-in;
     padding: .5rem;
     border-radius: 50%;
-    color: #ffffff;
+    color: #ab0de5;
 
     &:hover {
-        background-color: #2eacc8 ;
+        background-color:  #680a8ac9 ;
         color:#ffffff;
     }
 
