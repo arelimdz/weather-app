@@ -18,13 +18,14 @@ export default function WeatherParent(){
 
   return (
     <div className='Parent'>
+      <h1 className="AppName">Weather finder</h1>
       <SearchCity onUpdateCity={handleUpdateCity} />
       {loading ? (
         // Display a loading message if data loading
         <p className='loading'>Loading...</p>
       ) : error ? (
         // Display an error message if an error occurred
-        <p>{error}</p>
+        <p className='errorMessage'>{error}</p>
       ) : (
         // Display the weather data if there are not errors and data is laoaded
         <WeatherDisplay ApiData ={weatherData} />
