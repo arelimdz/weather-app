@@ -30,7 +30,9 @@ export default function useWeatherFetch(city) {
             const data = await response.json();
             setWeatherData(data);
         } catch (error) {
-            console.error("Error fetching weather data: ", error);
+            if (process.env.NODE_ENV === 'development') {
+                console.error("Error fetching weather data: ", error);
+            }
             setError(error.message);
         } finally {
             setLoading(false);

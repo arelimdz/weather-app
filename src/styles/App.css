@@ -5,8 +5,7 @@ body{
 .App{
     overflow: hidden;
     overflow: auto;
-	/* background: linear-gradient(to bottom,  #631c9c, #eb9ed6);  */
-    background-color:#b88cfa;
+    background-color:#b688fbcc;
 	height:  100vh;
     width: 100%;
 	margin: 0;
@@ -102,7 +101,7 @@ body{
 
 .input_containter{
     width: 100%;
-    color: #ab0de5;
+    color: #6d01badf;
     border: none;
     outline: none;
     background: none;
@@ -145,10 +144,10 @@ body{
     transition: all .25s ease-in;
     padding: .5rem;
     border-radius: 50%;
-    color: #ab0de5;
+    color: #6d01ba5a;
 
     &:hover {
-        background-color:  #680a8ac9 ;
+        background-color:  rgba(104, 10, 138, 0.86); ;
         color:#ffffff;
     }
 
