@@ -19,22 +19,25 @@ export default function useWeatherFetch(city) {
         setError(null);
 
         try {
-        const response = await fetch (apiUrl);
+            const response = await fetch(apiUrl);
             if (!response.ok) {
-            throw new Error('Network response was not ok');
+                if (response.status === 400) {
+                    throw new Error('City not found');
+                }
+                throw new Error('Network response was not ok');
             }
-
+        
             const data = await response.json();
             setWeatherData(data);
         } catch (error) {
-        console.error ("Error fetching weather data: ", error);
-        setError("Location not found.");
+            console.error("Error fetching weather data: ", error);
+            setError(error.message);
         } finally {
-        setLoading(false);
+            setLoading(false);
         }
     };
     fetchWeatherData ();
-    },[city]);
+    },[city, apiUrl]);
 
     return { weatherData, loading, error}
 }
