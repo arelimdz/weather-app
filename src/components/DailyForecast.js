@@ -23,8 +23,8 @@ return (
           <div className="temp_container">
             <p>{day.day.mintemp_c}° </p>
             <div className="bar">
-            {/* Assuming that 30 degrees is hights value */}
-            <div className="dot" style={{ left: `${(day.day.avgtemp_c / 30) * 100}%` }}></div>
+            {/* The dot represents the average temperature. The left position of the dot is calculated based on the average temperature. */}
+            <div className="dot" style={{ left: `${((day.day.avgtemp_c + 10) / 40) * 100}%` }}></div>
             </div>
             <p>{day.day.maxtemp_c}°</p>
           </div>
