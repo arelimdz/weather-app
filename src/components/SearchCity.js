@@ -22,7 +22,7 @@ function SearchCity({ onUpdateCity }) {
         <input
           className="input_containter subtitle"
           type="text"
-          placeholder="Search"
+          placeholder="Search city"
           value={city}
           onChange={(e) => setCity(e.target.value)}
           onKeyPress={handleKeyPress}
